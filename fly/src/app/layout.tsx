@@ -24,11 +24,36 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
+    <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
+    >
+    <div>
+        <nav className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+            <div className="container mx-auto px-6 py-4 flex justify-between items-center">
+                {/* Logo */}
+                <div className="text-xl font-bold text-blue-500">
+                    MyLogo
+                </div>
+
+                {/* Center Menu */}
+                <div className="flex space-x-6">
+                    <a href="#" className="text-gray-700 hover:text-blue-500">Главная</a>
+                    <a href="#" className="text-gray-700 hover:text-blue-500">Топ-каперы</a>
+                    <a href="#" className="text-gray-700 hover:text-blue-500">События</a>
+                </div>
+
+                {/* Registration Button */}
+                <button className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">
+                    Регистрация
+                </button>
+            </div>
+        </nav>
+    </div>
+    {children}
+    <footer className="mt-6 text-center text-gray-600">
+        <p>© 2025 Dashboard. All rights reserved.</p>
+    </footer>
+    </body>
     </html>
   );
 }
