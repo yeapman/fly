@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,15 +38,12 @@ export default function RootLayout({
 
                 {/* Center Menu */}
                 <div className="flex space-x-6">
-                    <a href="#" className="text-gray-700 hover:text-blue-500">Главная</a>
+                     <Link className="text-gray-700 hover:text-blue-500" href="/dashboard">Главная</Link>
+                    {/*<a href="#" className="text-gray-700 hover:text-blue-500">Главная</a>*/}
                     <a href="#" className="text-gray-700 hover:text-blue-500">Топ-каперы</a>
                     <a href="#" className="text-gray-700 hover:text-blue-500">События</a>
                 </div>
-
-                {/* Registration Button */}
-                <button className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">
-                    Регистрация
-                </button>
+                    <Link className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600" href="/registration">Регистрация</Link>
             </div>
         </nav>
     </div>
